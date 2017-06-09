@@ -304,7 +304,6 @@ int CConfigSearchDlg::FindStrInFile(const string &search, const string & sFile, 
 		string s = sLine;
 
 		if (is_utf8(s.c_str())) {
-			USES_CONVERSION;
 			CA2W s1(s.c_str(), CP_UTF8);
 			CW2A s2(s1);
 			sLine = s = s2;
